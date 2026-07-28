@@ -1,0 +1,21 @@
+# Secrets
+.env
+
+# Dataset (auto-downloaded by the notebook)
+imagenette2-160/
+notebooks/imagenette2-160/
+*.tgz
+notebooks/*.tgz
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db

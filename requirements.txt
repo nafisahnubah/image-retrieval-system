@@ -1,0 +1,9 @@
+torch
+torchvision
+opencv-python
+scikit-learn
+matplotlib
+pinecone-client==3.1.0
+python-dotenv
+pillow
+numpy
