@@ -35,13 +35,22 @@ low-level local patches and is much weaker at telling categories apart. The note
 includes precision-recall curves for both methods and a discussion of failure cases (e.g.
 queries where background similarity outweighs object identity).
 
+## Requirements
+
+- Python 3 (the notebook was run with Python 3.10)
+- A Jupyter environment (JupyterLab, Jupyter Notebook, or VS Code)
+- `curl` and `tar` on your `PATH`, used by the first cell to download the dataset
+- Optional: a [Pinecone](https://www.pinecone.io/) account for the vector-database section
+
 ## Getting started
 
 ```bash
 pip install -r requirements.txt
 ```
 
-The Imagenette dataset is downloaded automatically by the first cell of the notebook.
+The Imagenette dataset (~95 MB) is downloaded automatically by the first cell of the
+notebook into the current working directory, so start Jupyter from the `notebooks/`
+folder (the dataset paths there are already git-ignored).
 
 The vector-database section uses [Pinecone](https://www.pinecone.io/) — create a free
 account, grab an API key, and set it up locally:
@@ -63,9 +72,14 @@ image-retrieval-system/
 │   └── image_retrieval.ipynb   # all the code, results, and analysis
 ├── requirements.txt
 ├── .env.example
+├── LICENSE
 └── README.md
 ```
 
 ## Tech stack
 
 Python · PyTorch/torchvision (VGG16) · OpenCV (SIFT) · scikit-learn (k-means) · Pinecone · matplotlib
+
+## License
+
+[MIT](LICENSE)
